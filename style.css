@@ -3,6 +3,8 @@ body {
   margin: 0;
 }
 
+
+/* Larger displays */
 .grid_container {
   display: grid;
   grid-template: 1fr 450px 1fr/ 1fr 300px 300px 1fr;
@@ -15,8 +17,9 @@ body {
   height: 100vh;
 }
 
+
 .image {
-  background-image: url(images/image-product-desktop.jpg);
+  background-image: url("images/image-product-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -31,4 +34,38 @@ body {
   border-radius: 0px 15px 15px 0px;
 
   grid-area: content;
+}
+
+/* Small displays */
+@media screen and (max-width: 600px) {
+  .grid_container {
+    display: grid;
+    grid-template: 25vh 75vh / minmax(345px, 100vw);
+    justify-content: center;
+    grid-template-areas: 
+      "image"
+      "content";
+  }
+
+  .image {
+    background-image: url("images/image-product-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    border-radius: 15px 15px 0px 0px;
+  
+    grid-area: image;
+
+    margin: 15px 15px 0px 15px;
+  }
+
+  .contents {
+    background: #ffffff;
+  
+    border-radius: 0px 0px 15px 15px;
+  
+    grid-area: content;
+
+    margin: 0px 15px 15px 15px;
+  }
 }
