@@ -1,6 +1,9 @@
 body {
   background: #F2EAE2;
   margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
 }
 
 
@@ -18,12 +21,12 @@ body {
 }
 
 
-.image {
+.card_image {
   background-image: url("images/image-product-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 1rem 0 0 1rem;
 
   grid-area: image;
 }
@@ -31,41 +34,132 @@ body {
 .contents {
   background: #ffffff;
 
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0 1rem 1rem 0;
 
   grid-area: content;
+
+  padding: 0.88rem 1.75rem 0.88rem 1.75rem;
+}
+
+.product_type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin: 1.25rem 0 0 0;
+
+  color: #6C7289;
+}
+
+.product_name {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+
+  margin: 0.63rem 0 1.25rem 0;
+
+  color: #1C232B;
+}
+
+.product_description {
+  color: #6C7289;
+  line-height: 1.6;
+
+  margin: 0 0 1.25rem 0
+}
+
+.pricing_container {
+  display: flex;
+
+  margin: 1.56rem 0 1.56rem 0;
+}
+
+.product_price {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: #3D8168;
+
+  margin: 0 0 0 0;
+}
+
+.product_original_price {
+  color: #6C7289;
+  font-size: 0.81rem;
+  text-decoration: line-through;
+
+  margin: 0 0 0 2rem;
+
+  align-self: center;
+}
+
+.button_container {
+  justify-content:center;
+
+  background-color: #3D8168;
+
+  border-radius: 0.63rem;
+  padding: 0.94rem 1.88rem 0.94rem 1.88rem;
+
+  margin-bottom: 1.25rem;
+
+  transition: all 300ms;
+}
+
+.button_container:hover {
+  background-color: #1A4032;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.cart_image {
+  background-image: url("images/icon-cart.svg");
+  background-repeat: no-repeat;
+  min-width: 1rem;
+  min-height: 1rem;
+
+  display: inline-block;
+
+  margin-right: 0.5rem;
+}
+
+.button_content {
+  display: flex;
+  justify-content: center;
+
+  color: #ffffff;
+  font-weight: bold;
 }
 
 /* Small displays */
 @media screen and (max-width: 600px) {
   .grid_container {
     display: grid;
-    grid-template: 25vh 75vh / minmax(345px, 100vw);
+    grid-template: 40vh minmax(auto, auto) / minmax(300px, 100vw);
     justify-content: center;
     grid-template-areas: 
       "image"
       "content";
+
+      height: 100%;
   }
 
-  .image {
+  .card_image {
     background-image: url("images/image-product-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 0.94rem 0.94rem 0 0;
   
     grid-area: image;
 
-    margin: 15px 15px 0px 15px;
+    margin: 1.88rem 0.94rem 0 0.94rem;
   }
 
   .contents {
     background: #ffffff;
   
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0 0 0.94rem 0.94rem;
   
     grid-area: content;
 
-    margin: 0px 15px 15px 15px;
+    margin: 0 0.94rem 1.88rem 0.94rem;
   }
 }
