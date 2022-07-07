@@ -132,7 +132,7 @@ body {
 @media screen and (max-width: 600px) {
   .grid_container {
     display: grid;
-    grid-template: 40vh minmax(auto, auto) / minmax(300px, 100vw);
+    grid-template: minmax(auto, 240px) minmax(auto, auto) / minmax(300px, 100vw);
     justify-content: center;
     grid-template-areas: 
       "image"
