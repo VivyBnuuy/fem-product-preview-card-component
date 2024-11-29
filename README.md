@@ -17,6 +17,6 @@ For this challenge, I used the following:
 - I did not yet know about custom properties when I made this - That would've come in handy since I'm reusing some of the colors.
 
 # The End
-Thanks for checking out my solution to this challenge! If you have any feedback, I would love if you reached out to me or left a comment on my <a href="https://www.frontendmentor.io/solutions/product-preview-card-component-solution-AUimn6k_iy" target="_blank">solution page</a> - I'm always looking to improve!
+Thanks for checking out my solution to this challenge! If you have any feedback, I would love if you reached out to me or opened an issue if there's anything that needs fixing; I'm always looking to improve!
 
 Happy coding!
